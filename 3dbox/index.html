@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div class="cont">
+        <div class="box">
+            <div class="card" style="--i:1">
+                <div class="image"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NTA0ODZ8MHwxfHNlYXJjaHwzfHxwZXJzb258ZW58MHx8fHwxNzExMzYxNDQxfDA&ixlib=rb-4.0.3&q=80&w=400"></div>
+                <h2>Someone famous <span>Web designer</span></h2>
+            </div>
+            <div class="card" style="--i:2">
+                <div class="image"><img src="https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NTA0ODZ8MHwxfHNlYXJjaHw0MHx8cGVyc29ufGVufDB8fHx8MTcxMTM2MTYyMHww&ixlib=rb-4.0.3&q=80&w=400"></div>
+                <h2>Someone famous <span>Web designer</span></h2>
+            </div>
+            <div class="card" style="--i:3">
+                <div class="image"><img src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NTA0ODZ8MHwxfHNlYXJjaHwyNHx8cGVyc29ufGVufDB8fHx8MTcxMTM2MTU3MHww&ixlib=rb-4.0.3&q=80&w=400"></div>
+                <h2>Someone famous <span>Web designer</span></h2>
+            </div>
+            <div class="card" style="--i:4">
+                <div class="image"><img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NTA0ODZ8MHwxfHNlYXJjaHwzMnx8cGVyc29ufGVufDB8fHx8MTcxMTM2MTYwMHww&ixlib=rb-4.0.3&q=80&w=400"></div>
+                <h2>Someone famous <span>Web designer</span></h2>
+            </div>
+          
+        </div>
+    </div>
+    <div class="btns">
+        <div class="prev">
+        </div>
+        <div class="next">
+
+        </div>
+    </div>
+    <script>
+        let prev = document.querySelector(".prev")
+        let next = document.querySelector(".next")
+        let box = document.querySelector(".box")
+        let degree = 0 ;
+        prev.addEventListener("click",()=>{
+            degree-=90;
+            box.style=` transform:perspective(1000px) rotateY(${degree}deg)`;
+        })  
+        next.addEventListener("click",()=>{
+            degree+=90;
+            box.style=` transform:perspective(1000px) rotateY(${degree}deg)`;
+        })  
+        </script>
+</body>
+</html>
